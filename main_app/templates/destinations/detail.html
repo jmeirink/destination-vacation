@@ -21,6 +21,10 @@
   <div class="destination-details">
     <h1>{{ destination.destination }}</h1>
     <p>{{ destination.description }}</p>
+    <div class="destination-actions">
+      <a href="{% url 'destinations_update' destination.id %}" class="btn warn">Edit</a>
+      <a href="{% url 'destinations_delete' destination.id %}" class="btn danger">Delete</a>
+    </div>
   </div>
 </section>
 
