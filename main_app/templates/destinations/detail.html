@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link 
+  rel="stylesheet" 
+  type="text/css" 
+  href="{% static 'css/destinations/destination-detail.css' %}"
+/>
+{% endblock %}
+
+{% block content %}
+
+<section class="destination-container">
+  <div class="destination-img">
+    <img 
+      src="{% static 'images/destination.svg' %}" 
+      alt="A destination"
+    >
+  </div>
+  <div class="destination-details">
+    <h1>{{ destination.destination }}</h1>
+    <p>{{ destination.description }}</p>
+  </div>
+</section>
+
+{% endblock %}
