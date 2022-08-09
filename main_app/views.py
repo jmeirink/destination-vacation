@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Destination
+from .forms import ActivityForm
 from django.views.generic import ListView
 
 # Views
@@ -13,7 +14,16 @@ def destinations_index(request):
 
 def destinations_detail(request, destination_id):
   destination = Destination.objects.get(id=destination_id)
-  return render(request, 'destinations/detail.html', { 'destination': destination })
+  activity_form = ActivityForm()
+  return render(request, 'destinations/detail.html', { 'destination': destination, 'activity_form': activity_form })
+
+def add_activity(request, destination_id):
+  form = ActivityForm(request.POST)
+  if form.is_valid():
+    new_activity = form.save(commit=False)
+    new_activity.destination_id = destination_id
+    new_activity.save()
+  return redirect('destinations_detail', destination_id=destination_id)
 
 class DestinationCreate(CreateView):
   model = Destination

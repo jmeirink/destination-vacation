@@ -28,4 +28,57 @@
   </div>
 </section>
 
+<div class="activities-toy-container">  {% comment %} Not sure {% endcomment %}
+  <section class="activities">
+    <div class="subsection-title">
+      <h2>Activities</h2>
+      <img 
+        src="{% static 'images/destination.svg' %}" 
+        alt="A destination"
+      />
+      <img 
+        src="{% static 'images/destination.svg' %}" 
+        alt="A destination"
+      />
+      <img 
+        src="{% static 'images/destination.svg' %}" 
+        alt="A destination"
+      />
+    </div>
+
+    <h3>Add an Activity</h3>
+    <form
+      action="{% url 'add_activity' destination.id %}" 
+      method="post" 
+      class="subsection-content"
+    >
+      {% csrf_token %}
+      {{ activity_form.as_p }}
+      <button type="submit" class="btn submit">Add Activity</button>
+    </form>
+    <h3>Activities</h3>
+
+    {% if destination.activity_set.all.count %}
+      <table>
+        <thead>
+          <tr><th>Type</th><th>Activity</th></tr>
+        </thead>
+        <tbody>
+          {% for activity in destination.activity_set.all %}
+            <tr>
+              <td>{{activity.get_type_display}}</td>  {% comment %} Not sure {% endcomment %}
+              <td>{{activity.activity}}</td>  {% comment %} Not sure {% endcomment %}
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <div class="subsection-content">
+        <p>There are no activities yet!</p>
+      </div>
+    {% endif %}
+
+  </section>
+</div>
+
 {% endblock %}
