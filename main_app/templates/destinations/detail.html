@@ -28,7 +28,7 @@
   </div>
 </section>
 
-<div class="activities-toy-container">  {% comment %} Not sure {% endcomment %}
+<div class="activities-container">
   <section class="activities">
     <div class="subsection-title">
       <h2>Activities</h2>
@@ -66,8 +66,8 @@
         <tbody>
           {% for activity in destination.activity_set.all %}
             <tr>
-              <td>{{activity.get_type_display}}</td>  {% comment %} Not sure {% endcomment %}
-              <td>{{activity.activity}}</td>  {% comment %} Not sure {% endcomment %}
+              <td>{{activity.get_type_display}}</td>
+              <td>{{activity.activity}}</td>
             </tr>
           {% endfor %}
         </tbody>
