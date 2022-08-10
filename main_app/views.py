@@ -34,7 +34,7 @@ def add_activity(request, destination_id):
 
 class DestinationCreate(LoginRequiredMixin, CreateView):
   model = Destination
-  fields = '__all__'
+  fields = ['destination', 'description']
   # success_url = '/destinations/'
 
   def form_valid(self, form):
