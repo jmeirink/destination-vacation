@@ -4,15 +4,17 @@ main {
   justify-content: center;
   flex-wrap: wrap;
   height: 100%;
+  flex-direction: column; /* Added */
+  text-align: center; /* Added */
 }
 
 main > section {
   width: 100%;
-  padding: 10px 8px;
+  padding: 5px 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  /* flex-direction: column; */
 }
 
 .header-logo-container {
@@ -20,7 +22,7 @@ main > section {
 }
 
 .logo-container {
-  max-width: 375px;
+  /* max-width: 375px; */
   font-size: xx-large;
 }
 
@@ -29,11 +31,11 @@ main > section {
 }
 
 .login {
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 50%;
 }
 
 .login h1 {
@@ -61,24 +63,24 @@ main > section {
 .login .btn {
   align-self: flex-end;
   margin-right: 0;
-  margin-top: 16px;
+  margin-top: 27px;
 }
 
 @media only screen and (min-width: 768px) {
-  main {
+  /* main {
     justify-content: space-around;
-  }
+  } */
 
-  main > section {
+  /* main > section {
     width: 40%;
-  }
+  } */
 
   .login {
-    border: var(--borders);
+    /* border: var(--borders); */
     padding: 20px;
     border-radius: var(--card-border-radius);
-    box-shadow: var(--card-box-shadow);
-    width: 100%;
+    /* box-shadow: var(--card-box-shadow); */
+    width: 25%;
   }
 
   .logo-container {
