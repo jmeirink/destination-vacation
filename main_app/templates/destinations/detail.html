@@ -11,53 +11,22 @@
 
 {% block content %}
 
-<section class="destination-container">
+{% comment %} <section class="destination-container">
   <div class="destination-img">
     <img 
       src="{% static 'images/destination.svg' %}" 
       alt="A destination"
     >
-  </div>
+  </div> {% endcomment %}
   <div class="destination-details">
     <h1>{{ destination.destination }}</h1>
     <p>{{ destination.description }}</p>
-    <div class="destination-actions">
-      <a href="{% url 'destinations_update' destination.id %}" class="btn warn">Edit</a>
-      <a href="{% url 'destinations_delete' destination.id %}" class="btn danger">Delete</a>
-    </div>
   </div>
 </section>
 
 <div class="activities-container">
   <section class="activities">
-    <div class="subsection-title">
-      <h2>Activities</h2>
-      <img 
-        src="{% static 'images/destination.svg' %}" 
-        alt="A destination"
-      />
-      <img 
-        src="{% static 'images/destination.svg' %}" 
-        alt="A destination"
-      />
-      <img 
-        src="{% static 'images/destination.svg' %}" 
-        alt="A destination"
-      />
-    </div>
-
-    <h3>Add an Activity</h3>
-    <form
-      action="{% url 'add_activity' destination.id %}" 
-      method="post" 
-      class="subsection-content"
-    >
-      {% csrf_token %}
-      {{ activity_form.as_p }}
-      <button type="submit" class="btn submit">Add Activity</button>
-    </form>
     <h3>Activities</h3>
-
     {% if destination.activity_set.all.count %}
       <table>
         <thead>
@@ -78,7 +47,23 @@
       </div>
     {% endif %}
 
+    <h3>Add an Activity</h3>
+    <form
+      action="{% url 'add_activity' destination.id %}" 
+      method="post" 
+      class="subsection-content"
+    >
+      {% csrf_token %}
+      {{ activity_form.as_p }}
+      <button type="submit" class="btn submit">Add Activity</button>
+    </form>
+    
   </section>
+</div>
+
+<div class="destination-actions">
+  <a href="{% url 'destinations_update' destination.id %}" class="btn warn">Edit</a>
+  <a href="{% url 'destinations_delete' destination.id %}" class="btn danger">Delete</a>
 </div>
 
 {% endblock %}

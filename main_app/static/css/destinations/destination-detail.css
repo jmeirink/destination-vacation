@@ -17,10 +17,16 @@
 }
 
 .destination-details {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  align-items: center;
   width: 98%;
 }
 
 .destination-actions {
+  display: flex;
+  justify-content: center;
   margin-top: 20px;
 }
 
@@ -119,6 +125,7 @@
   text-align: left;
   border-collapse: collapse;
   margin: 0 8px;
+  border-bottom: rgb(0, 0, 0) solid 2px;
 }
 
 .activities td {
@@ -129,7 +136,7 @@
 .activities th {
   font-size: var(--font-l);
   padding: 5px 5px 0;
-  border-bottom: rgb(36, 116, 248) solid 2px;
+  border-bottom: rgb(0, 0, 0) solid 2px;
 }
 
 .activities tr:nth-child(even) {
