@@ -20,13 +20,13 @@
     <div class="card">
       <a href="{% url 'destinations_detail' destination.id %}">
         <div class="card-content">
-          <div class="card-img-container">
+          {% comment %} <div class="card-img-container">
             <img 
               src="{% static 'images/destination.svg' %}" 
               alt="A destination"
             >
-          </div>
-          <h2 class="card-title">{{ destination.name }}</h2>
+          </div> {% endcomment %}
+          <h2 class="card-title">{{ destination.destination }}</h2>
           <p><small>{{ destination.description }}</small></p>
         </div>
       </a>
