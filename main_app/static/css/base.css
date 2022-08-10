@@ -96,11 +96,11 @@ nav li {
   padding: 5px 8px;
 }
 
-.header-logo-container {
+/* .header-logo-container {
   margin: auto;
   padding: 10px 20px 0;
   max-width: 500px;
-}
+} */
 
 .page-header {
   display: flex;
@@ -186,9 +186,9 @@ nav li {
   }
 
   /* visual fix to help align logo */
-  .header-logo-container {
+  /* .header-logo-container {
     padding-top: 3px;
-  }
+  } */
 
   nav {
     margin-left: auto;
@@ -200,9 +200,9 @@ nav li {
     flex-wrap: nowrap;
   }
 
-  .header-logo-container {
+  /* .header-logo-container {
     width: 213px;
-  }
+  } */
 
   .page-header h1 {
     font-size: var(--font-xtreme);
@@ -252,12 +252,11 @@ nav li {
     margin-left: auto;
   }
 
-  .header-logo-container {
-    /* visual fix to help align logo */
+  /* .header-logo-container {
     padding-top: 6px;
     width: 256px;
     height: 35px;
-  }
+  } */
 
   @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
     header {

@@ -7,11 +7,23 @@
 
 {% block content %}
 
-<section class="logo-container ">
-  <h1>Destination Vacation</h1>
-</section>
+{% if user.is_authenticated %}
+
+  <section class="logo-container ">
+    <h1>Destination Vacation</h1>
+  </section>
+
+  <section>
+    <h1>Discover your dream vacation</h1>
+  </section>
+
+{% endif %}
 
 {% if not user.is_authenticated %}
+
+  <section class="logo-container ">
+    <h1>Destination Vacation</h1>
+  </section>
 
   <section>
     <h1>Login to discover your dream vacation</h1>

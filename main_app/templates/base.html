@@ -6,11 +6,6 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  {% comment %} <link
-    rel="shortcut icon"
-    type="image/png"
-    href="{% static 'images/splash.svg' %}"
-  > {% endcomment %}
   <title>Destination Vacation</title>
   <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
   {% block head %}
@@ -18,23 +13,14 @@
 </head>
 <body>
   <header>
-    <div class="header-logo-container">
-      <a href="/">
-        Home
-        {% comment %} <img 
-          src="{% static 'images/destination.svg' %}"
-          alt="A destination"
-        > {% endcomment %}
-      </a>
-    </div>
     <nav>
       <ul>
         {% if user.is_authenticated %}
+          <li><a href="{% url 'home' %}">Home</a></li>
           <li><a href="{% url 'destinations_index' %}">Destinations</a></li>
           <li><a href="{% url 'destinations_create' %}">Add a Destination</a></li>
           <li><a href="{% url 'logout' %}">Log out</a></li>
         {% else %}
-          <li><a href="{% url 'home' %}">Login</a></li>
           <li><a href="{% url 'signup' %}">Sign Up</a></li>
         {% endif %}
       </ul>
