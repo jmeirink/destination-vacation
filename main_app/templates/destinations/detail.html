@@ -40,7 +40,11 @@
         <p>There are no activities yet!</p>
       </div>
     {% endif %}
+  </section>
+</div>
 
+<div class="add-activities-container">
+  <section class="add-activities">
     <h3>Add an Activity</h3>
     <form
       action="{% url 'add_activity' destination.id %}" 
@@ -51,7 +55,6 @@
       {{ activity_form.as_p }}
       <button type="submit" class="btn submit">Add Activity</button>
     </form>
-    
   </section>
 </div>
 

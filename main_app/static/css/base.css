@@ -106,7 +106,7 @@ nav li {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px;
+  margin: 50px;
 }
 
 .btn {
@@ -150,6 +150,7 @@ nav li {
 .page-header h1 {
   font-size: var(--font-xxl);
   margin: 0;
+  text-align: center;
 }
 
 .page-header img {

@@ -36,6 +36,24 @@
   padding-bottom: 20px;
   align-items: center;
 }
+.add-activities-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* .add-activities-container > section {
+  width: 80%;
+  min-width: 360px;
+  border: var(--borders);
+  border-radius: var(--card-border-radius);
+  padding: 10px;
+  box-shadow: var(--card-box-shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+  align-items: center;
+} */
 
 .subsection-title {
   display: flex;
@@ -159,7 +177,7 @@
     padding: 35px 30px;
     flex-direction: row;
     align-items: center;
-    justify-content: start;
+    /* justify-content: start; */
   }
 
   .destination-img {
