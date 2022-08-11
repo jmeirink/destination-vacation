@@ -10,7 +10,6 @@
 {% endblock %}
 
 {% block content %}
-
 <section class="destination-container">
   <div class="destination-details">
     <h1>{{ destination.destination }}</h1>
@@ -43,31 +42,16 @@
   </section>
 </div>
 
-{% comment %} <div class="add-activities-container">
-  <section class="add-activities">
-    <h3>Add an Activity</h3>
-    <form
-      action="{% url 'add_activity' destination.id %}" 
-      method="post" 
-      class="subsection-content"
-    >
-      {% csrf_token %}
-      {{ activity_form.as_p }}
-      <button type="submit" class="btn submit">Add Activity</button>
-    </form>
-  </section>
-</div> {% endcomment %}
-
 <form 
-    action="{% url 'add_activity' destination.id %}" 
-    method="post" 
-    class="form-container"
-  >
-    {% csrf_token %}
-    <table>
-      {{ activity_form.as_table }}
-    </table>
-    <button type="submit" class="btn">Add Activity</button>
+  action="{% url 'add_activity' destination.id %}" 
+  method="post" 
+  class="form-container"
+>
+  {% csrf_token %}
+  <table>
+    {{ activity_form.as_table }}
+  </table>
+  <button type="submit" class="btn">Add Activity</button>
 </form>
 
 <div class="destination-actions">
