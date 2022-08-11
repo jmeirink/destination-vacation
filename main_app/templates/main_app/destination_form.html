@@ -15,16 +15,12 @@
   {% endif %}
 </div>
 
-{% comment %} ---------------------------------- {% endcomment %}
-
 <form action="" method="post" class="form-container">
   {% csrf_token %}
   <table>
     {{ form.as_table }}
   </table>
-  <button type="submit" class="btn">Add</button>
+  <button type="submit" class="btn">Submit</button>
 </form>
-
-{% comment %} ---------------------------------- {% endcomment %}
 
 {% endblock %}
