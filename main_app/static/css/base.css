@@ -18,9 +18,10 @@ html {
 }
 
 body {
-  /* background-image: url('../images/bg-img9.jpg');
+  /* background-image: url('../images/bg-img9.jpg'); */
+  background:linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('../images/bg-img9.jpg');
   background-size: cover;
-  background-repeat: no-repeat; */
+  background-repeat: no-repeat;
   margin: 0;
   display: flex;
   flex-direction: column;

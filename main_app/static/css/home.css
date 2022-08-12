@@ -4,8 +4,10 @@ main {
   justify-content: center;
   flex-wrap: wrap;
   height: 100%;
-  flex-direction: column; /* Added */
-  text-align: center; /* Added */
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px #000000;
 }
 
 main > section {
