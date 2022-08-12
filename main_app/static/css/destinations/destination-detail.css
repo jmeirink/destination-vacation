@@ -89,9 +89,9 @@
   border-bottom: rgb(0, 0, 0) solid 2px;
 }
 
-.activities tr:nth-child(even) {
+/* .activities tr:nth-child(even) {
   background-color: #f3f3fd;
-}
+} */
 
 .form-container {
   display: flex;
