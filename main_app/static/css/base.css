@@ -144,6 +144,8 @@ nav li {
   font-size: var(--font-xxl);
   margin: 0;
   text-align: center;
+  color: white;
+  text-shadow: 2px 2px #000000;
 }
 
 .page-header img {
