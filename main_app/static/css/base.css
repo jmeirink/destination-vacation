@@ -26,7 +26,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Abril Fatface', cursive;
+  font-family: 'Abril Fatface', sans-serif;
   min-height: 100vh;
   --nav-bg: rgb(245 245 245);
   --nav-bg-ff: rgb(245 245 245);
