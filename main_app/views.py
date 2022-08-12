@@ -13,10 +13,10 @@ from .forms import ActivityForm
 class Home(LoginView):
   template_name = 'home.html'
 
-@login_required # You can remove this if you dont want this functionality 
+@login_required
 def destinations_index(request):
-  destinations = Destination.objects.all() # Comment and uncomment next line to show just users destinations
-  # destinations = Destination.objects.filter(user=request.user)
+  destinations = Destination.objects.all()
+  destinations = Destination.objects.filter(user=request.user) # Uncomment this line to show just users destinations.
   return render(request, 'destinations/index.html', { 'destinations': destinations })
 
 def destinations_detail(request, destination_id):
